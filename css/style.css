@@ -1,0 +1,65 @@
+/* Gotta use flex as much as possible for layouts. */
+
+[block] {
+  display: block;
+}
+
+[inline-block] {
+  display: inline-block;
+}
+
+[flex] { /* Flex parent. Default flex setting to be overridden. */
+  display: flex;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+  flex-flow: wrap;
+    -webkit-flex-flow: wrap;
+    -ms-flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+}
+
+[flex-child] { /* Default flex setting to be overridden. */
+  /* 
+    This is amazing.
+    You can change the flex order to move things around next time.
+    So basically, 
+    order: 0 | 1 | 2 | etc;
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+    flex-grow: 0 | 1 | 2 | etc;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex: 0 1 auto; // shorthand
+      -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+    align-self: auto | flex-start | flex-end | etc; // to override align-items of parent
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+  */
+}
+
+main-view {
+  font-family: Georgia, Serif;
+  font-size: 12px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card {
+  padding: 20px;
+  width: 300px;
+  height: 150px;
+  margin: 20px;
+  border: 1px solid lightgray;
+  box-shadow: 1px 1px 5px 1px lightgray,
+	      -1px -1px 5px 1px lightgray; 
+}
+
+geoyws-logo {
+  font-size: 32px;
+}
+
